@@ -1,0 +1,28 @@
+#include <stdio.h>
+
+float calcularJuros(float c, int m, float t) {
+    float j;
+    j = c * m * t;
+    return j;
+}
+
+int main() {
+    float c, t;
+    int m;
+    
+    printf("Digite o valor do empréstimo (c): ");
+    scanf("%f", &c);
+    
+    printf("Digite o número de meses (m): ");
+    scanf("%d", &m);
+    
+    printf("Digite a taxa de juros ao mês (t): ");
+    scanf("%f", &t);
+    
+    float juros = calcularJuros(c, m, t);
+    
+    printf("Os juros cobrados no empréstimo são: %.2f\n", juros);
+    
+    return 0;
+}
+  
