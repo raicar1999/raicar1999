@@ -1,0 +1,33 @@
+#include <stdio.h>
+
+int calcularSomaPares(int a, int b) {
+    int soma = 0;
+    
+    // Verifica se 'a' é ímpar e incrementa para o próximo número par
+    if (a % 2 != 0) {
+        a++;
+    }
+    
+    // Percorre os números pares entre 'a' e 'b' e realiza a soma
+    for (int i = a; i <= b; i += 2) {
+        soma += i;
+    }
+    
+    return soma;
+}
+
+int main() {
+    int a, b;
+    
+    printf("Digite o número 'a' (menor): ");
+    scanf("%d", &a);
+    
+    printf("Digite o número 'b' (maior): ");
+    scanf("%d", &b);
+    
+    int somaPares = calcularSomaPares(a, b);
+    
+    printf("A soma dos números pares entre %d e %d é: %d\n", a, b, somaPares);
+    
+    return 0;
+}
